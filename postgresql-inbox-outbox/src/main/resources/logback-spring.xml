@@ -16,6 +16,7 @@
   ~ limitations under the License.
   -->
 
+<!-- Inspired by: https://github.com/marcingrzejszczak/observability-boot-blog-post/blob/main/server/src/main/resources/logback-spring.xml -->
 <configuration>
     <include resource="org/springframework/boot/logging/logback/base.xml" />
     <springProperty scope="context" name="appName" source="spring.application.name"/>
@@ -35,21 +36,21 @@
         </format>
     </appender>
 
-    <logger name="dk.cloudcreate.essentials" level="DEBUG"/>
-    <logger name="dk.cloudcreate.essentials.components.foundation.transaction" level="INFO"/>
-    <logger name="dk.cloudcreate.essentials.components.foundation.reactive.command.DurableLocalCommandBus" level="INFO"/>
-    <logger name="dk.cloudcreate.essentials.components.distributed.fencedlock.postgresql.PostgresqlFencedLockManager" level="INFO"/>
-    <logger name="dk.cloudcreate.essentials.shared.interceptor.DefaultInterceptorChain" level="INFO"/>
-    <logger name="dk.cloudcreate.essentials.components.foundation.messaging.eip.store_and_forward.Inboxes.DurableQueueBasedInboxes" level="INFO"/>
-    <logger name="dk.cloudcreate.essentials.components.queue.postgresql.PostgresqlDurableQueues" level="INFO"/>
-    <logger name="dk.cloudcreate.essentials.components.queue.postgresql.PostgresqlDurableQueues$1" level="INFO"/>
-    <logger name="dk.cloudcreate.essentials.components.foundation.messaging.queue.DurableQueueConsumer" level="INFO"/>
-    <logger name="dk.cloudcreate.essentials.components.foundation.messaging.queue.DurableQueueConsumer.MessageHandlingFailures" level="INFO"/>
-    <logger name="dk.cloudcreate.essentials.components.foundation.messaging.queue.QueuePollingOptimizer.SimpleQueuePollingOptimizer" level="INFO"/>
+    <logger name="dk.trustworks.essentials" level="DEBUG"/>
+    <logger name="dk.trustworks.essentials.components.foundation.transaction" level="INFO"/>
+    <logger name="dk.trustworks.essentials.components.foundation.reactive.command.DurableLocalCommandBus" level="INFO"/>
+    <logger name="dk.trustworks.essentials.components.distributed.fencedlock.postgresql.PostgresqlFencedLockManager" level="INFO"/>
+    <logger name="dk.trustworks.essentials.shared.interceptor.DefaultInterceptorChain" level="INFO"/>
+    <logger name="dk.trustworks.essentials.components.foundation.messaging.eip.store_and_forward.Inboxes.DurableQueueBasedInboxes" level="INFO"/>
+    <logger name="dk.trustworks.essentials.components.queue.postgresql.PostgresqlDurableQueues" level="INFO"/>
+    <logger name="dk.trustworks.essentials.components.queue.postgresql.PostgresqlDurableQueues$1" level="INFO"/>
+    <logger name="dk.trustworks.essentials.components.foundation.messaging.queue.DurableQueueConsumer" level="INFO"/>
+    <logger name="dk.trustworks.essentials.components.foundation.messaging.queue.DurableQueueConsumer.MessageHandlingFailures" level="INFO"/>
+    <logger name="dk.trustworks.essentials.components.foundation.messaging.queue.QueuePollingOptimizer.SimpleQueuePollingOptimizer" level="INFO"/>
 
-    <logger name="dk.cloudcreate.essentials.components.foundation.interceptor.micrometer.RecordExecutionTimeCommandBusInterceptor" level="DEBUG"/>
-    <logger name="dk.cloudcreate.essentials.components.foundation.interceptor.micrometer.RecordExecutionTimeDurableQueueInterceptor" level="DEBUG"/>
-    <logger name="dk.cloudcreate.essentials.components.foundation.interceptor.micrometer.RecordExecutionTimeMessageHandlerInterceptor" level="DEBUG"/>
+    <logger name="dk.trustworks.essentials.components.foundation.interceptor.micrometer.RecordExecutionTimeCommandBusInterceptor" level="DEBUG"/>
+    <logger name="dk.trustworks.essentials.components.foundation.interceptor.micrometer.RecordExecutionTimeDurableQueueInterceptor" level="DEBUG"/>
+    <logger name="dk.trustworks.essentials.components.foundation.interceptor.micrometer.RecordExecutionTimeMessageHandlerInterceptor" level="DEBUG"/>
 
     <root level="INFO">
         <appender-ref ref="LOKI"/>

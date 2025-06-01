@@ -21,7 +21,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>dk.cloudcreate.essentials</groupId>
+        <groupId>dk.trustworks.essentials</groupId>
         <artifactId>spring-examples</artifactId>
         <version>${revision}</version>
     </parent>
@@ -34,12 +34,12 @@
 
     <dependencies>
         <dependency>
-            <groupId>dk.cloudcreate.essentials.components</groupId>
+            <groupId>dk.trustworks.essentials.components</groupId>
             <artifactId>spring-boot-starter-postgresql-event-store</artifactId>
             <version>${essentials.version}</version>
         </dependency>
         <dependency>
-            <groupId>dk.cloudcreate.essentials.components</groupId>
+            <groupId>dk.trustworks.essentials.components</groupId>
             <artifactId>eventsourced-aggregates</artifactId>
             <version>${essentials.version}</version>
         </dependency>

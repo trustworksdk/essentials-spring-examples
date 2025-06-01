@@ -24,14 +24,14 @@
         </encoder>
     </appender>
 
-    <logger name="dk.cloudcreate.essentials" level="DEBUG"/>
-    <logger name="dk.cloudcreate.essentials.components.foundation.transaction" level="INFO"/>
-    <logger name="dk.cloudcreate.essentials.components.distributed.fencedlock" level="INFO"/>
+    <logger name="dk.trustworks.essentials" level="DEBUG"/>
+    <logger name="dk.trustworks.essentials.components.foundation.transaction" level="INFO"/>
+    <logger name="dk.trustworks.essentials.components.distributed.fencedlock" level="INFO"/>
 
     <!-- Set to TRACE to see detailed queue logs -->
-    <logger name="dk.cloudcreate.essentials.components.queue" level="INFO"/>
-    <logger name="dk.cloudcreate.essentials.components.foundation.messaging.queue.DurableQueueConsumer" level="INFO"/>
-    <logger name="dk.cloudcreate.essentials.components.foundation.messaging.queue.DurableQueueConsumer.MessageHandlingFailures" level="DEBUG"/>
+    <logger name="dk.trustworks.essentials.components.queue" level="INFO"/>
+    <logger name="dk.trustworks.essentials.components.foundation.messaging.queue.DurableQueueConsumer" level="INFO"/>
+    <logger name="dk.trustworks.essentials.components.foundation.messaging.queue.DurableQueueConsumer.MessageHandlingFailures" level="DEBUG"/>
 
     <root level="INFO">
         <appender-ref ref="STDOUT"/>
