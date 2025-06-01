@@ -20,7 +20,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>dk.cloudcreate.essentials</groupId>
+    <groupId>dk.trustworks.essentials</groupId>
     <artifactId>spring-examples</artifactId>
     <packaging>pom</packaging>
     <version>${revision}</version>
@@ -28,12 +28,12 @@
     <description>
         Set of Essentials examples using Spring/Spring-Boot
     </description>
-    <url>https://github.com/cloudcreate-dk/essentials-spring-examples</url>
+    <url>https://github.com/trustworksdk/essentials-spring-examples</url>
 
     <scm>
-        <url>https://github.com/cloudcreate-dk/essentials-spring-examples</url>
-        <developerConnection>scm:https://github.com/cloudcreate-dk/essentials-spring-examples.git</developerConnection>
-        <connection>scm:https://github.com/cloudcreate-dk/essentials-spring-examples.git</connection>
+        <url>https://github.com/trustworksdk/essentials-spring-examples</url>
+        <developerConnection>scm:https://github.com/trustworksdk/essentials-spring-examples.git</developerConnection>
+        <connection>scm:https://github.com/trustworksdk/essentials-spring-examples.git</connection>
     </scm>
 
     <licenses>
@@ -49,7 +49,7 @@
             <name>Jeppe Cramon</name>
             <organization>Trustworks</organization>
             <organizationUrl>https://www.trustworks.dk</organizationUrl>
-            <url>https://github.com/cloudcreate-dk</url>
+            <url>https://github.com/jeppec</url>
         </developer>
     </developers>
 
@@ -61,45 +61,41 @@
         <skipDependencyCheck>false</skipDependencyCheck>
 
         <!--Essentials versions-->
-        <essentials.version>0.40.23</essentials.version>
+        <essentials.version>0.40.24</essentials.version>
 
-        <spring-boot.version>3.2.12</spring-boot.version>
-        <spring-framework-bom.version>6.1.18</spring-framework-bom.version>
-        <reactor-bom.version>2023.0.16</reactor-bom.version>
-        <spring-data-mongodb.version>4.2.12</spring-data-mongodb.version>
-        <spring-data-jpa.version>3.2.12</spring-data-jpa.version>
+        <spring-boot.version>3.3.12</spring-boot.version>
+        <spring-framework-bom.version>6.1.20</spring-framework-bom.version>
+        <reactor-bom.version>2023.0.18</reactor-bom.version>
+        <spring-data-mongodb.version>4.3.12</spring-data-mongodb.version>
+        <spring-data-jpa.version>3.3.12</spring-data-jpa.version>
         <objenesis.version>3.4</objenesis.version>
-        <postgresql.version>42.7.5</postgresql.version>
+        <postgresql.version>42.7.6</postgresql.version>
         <slf4j.version>2.0.17</slf4j.version>
         <awaitility.version>4.3.0</awaitility.version>
         <assertj.version>3.27.3</assertj.version>
-        <mongodb-driver-sync.version>4.11.5</mongodb-driver-sync.version>
+        <mongodb-driver-sync.version>5.0.1</mongodb-driver-sync.version>
         <log4j-to-slf4j.version>2.24.3</log4j-to-slf4j.version>
         <json-smart.version>2.5.2</json-smart.version>
         <json-path.version>2.9.0</json-path.version>
-        <snakeyaml.version>2.3</snakeyaml.version>
-        <micrometer.version>1.12.13</micrometer.version>
-        <micrometer-tracing.version>1.2.12</micrometer-tracing.version>
-        <netty-bom.version>4.1.119.Final</netty-bom.version>
-        <junit-bom.version>5.12.1</junit-bom.version>
-        <testcontainers-bom.version>1.20.6</testcontainers-bom.version>
-        <jdbi3-bom.version>3.49.0</jdbi3-bom.version>
-        <jackson-bom.version>2.18.3</jackson-bom.version>
-        <mockito-bom.version>5.16.1</mockito-bom.version>
+        <snakeyaml.version>2.4</snakeyaml.version>
+        <micrometer.version>1.13.14</micrometer.version>
+        <micrometer-tracing.version>1.3.12</micrometer-tracing.version>
+        <netty-bom.version>4.2.1.Final</netty-bom.version>
+        <junit-bom.version>5.12.2</junit-bom.version>
+        <testcontainers-bom.version>1.21.0</testcontainers-bom.version>
+        <jdbi3-bom.version>3.49.4</jdbi3-bom.version>
+        <jackson-bom.version>2.19.0</jackson-bom.version>
+        <mockito-bom.version>5.18.0</mockito-bom.version>
         <logback.version>1.5.18</logback.version>
         <avro.version>1.12.0</avro.version>
         <commons-compress.version>1.27.1</commons-compress.version>
-        <xmlunit-core.version>2.10.0</xmlunit-core.version>
-        <!-- Due to CVE in version 10.1.33 included by Spring Boot 3.2.12 -->
-        <tomcat.version>10.1.39</tomcat.version>
+        <xmlunit-core.version>2.10.2</xmlunit-core.version>
 
         <!-- Examples specific versions -->
-        <spring-kafka.version>3.1.10</spring-kafka.version>
-        <kafka-clients.version>3.9.0</kafka-clients.version>
-        <lombok.version>1.18.36</lombok.version>
-        <prometheus-simpleclient.version>0.16.0</prometheus-simpleclient.version>
-        <zipkin-reporter-brave.version>2.17.2</zipkin-reporter-brave.version>
-        <loki-logback-appender.version>1.5.2</loki-logback-appender.version>
+        <spring-kafka.version>3.2.9</spring-kafka.version>
+        <kafka-clients.version>3.9.1</kafka-clients.version>
+        <lombok.version>1.18.38</lombok.version>
+        <loki-logback-appender.version>1.6.0</loki-logback-appender.version>
 
         <!-- Maven plugin versions -->
         <maven-dependency-plugin.version>3.8.1</maven-dependency-plugin.version>
@@ -188,22 +184,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!-- Due to CVE in Tomcat 10.1.33 included by Spring Boot 3.2.12 -->
-            <dependency>
-                <groupId>org.apache.tomcat.embed</groupId>
-                <artifactId>tomcat-embed-core</artifactId>
-                <version>${tomcat.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.tomcat.embed</groupId>
-                <artifactId>tomcat-embed-el</artifactId>
-                <version>${tomcat.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.tomcat.embed</groupId>
-                <artifactId>tomcat-embed-websocket</artifactId>
-                <version>${tomcat.version}</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -233,80 +213,77 @@
         </dependency>
 
         <!-- Tracing, Latency and Metric setup is inspired by https://spring.io/blog/2022/10/12/observability-with-spring-boot-3 / https://github.com/marcingrzejszczak/observability-boot-blog-post -->
+        <!-- Prerequisite for observability -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-actuator-autoconfigure</artifactId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
             <version>${spring-boot.version}</version>
         </dependency>
+
+        <!-- For Observation AOP -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
             <version>${spring-boot.version}</version>
         </dependency>
+
+        <!-- For Metrics -->
         <dependency>
             <groupId>io.micrometer</groupId>
-            <artifactId>micrometer-core</artifactId>
+            <artifactId>micrometer-registry-otlp</artifactId>
             <version>${micrometer.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.protobuf</groupId>
+                    <artifactId>protobuf-java</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
+        <!-- Due to CVE's in version 3.23.4 included by micrometer-registry-otlp -->
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>4.31.1</version>
+        </dependency>
+
+        <!-- For Tracing - Using OTLP instead of Zipkin -->
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-tracing-bridge-otel</artifactId>
+            <version>${micrometer-tracing.version}</version>
+        </dependency>
+
+        <!-- OTLP Tracing exporter -->
+        <dependency>
+            <groupId>io.opentelemetry</groupId>
+            <artifactId>opentelemetry-exporter-otlp</artifactId>
+            <version>1.38.0</version>
+        </dependency>
+
         <dependency>
             <groupId>io.micrometer</groupId>
             <artifactId>micrometer-tracing</artifactId>
             <version>${micrometer-tracing.version}</version>
         </dependency>
-
-        <!-- Metrics -->
         <dependency>
             <groupId>io.micrometer</groupId>
-            <artifactId>micrometer-registry-prometheus</artifactId>
+            <artifactId>micrometer-observation</artifactId>
             <version>${micrometer.version}</version>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.prometheus</groupId>
-            <artifactId>simpleclient</artifactId>
-            <version>${prometheus-simpleclient.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.prometheus</groupId>
-            <artifactId>simpleclient_hotspot</artifactId>
-            <version>${prometheus-simpleclient.version}</version>
         </dependency>
 
-        <!-- Brave Tracing/Latency -->
-        <!-- Tracing -->
-        <dependency>
-            <groupId>io.micrometer</groupId>
-            <artifactId>micrometer-tracing-bridge-brave</artifactId>
-            <version>${micrometer-tracing.version}</version>
-        </dependency>
-        <!-- Latency -->
-        <dependency>
-            <groupId>io.zipkin.reporter2</groupId>
-            <artifactId>zipkin-reporter-brave</artifactId>
-            <version>${zipkin-reporter-brave.version}</version>
-            <scope>runtime</scope>
-        </dependency>
 
-        <!-- OpenTelemetry Tracing/Latency-->
-<!--        &lt;!&ndash; For Tracing &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>io.micrometer</groupId>-->
-<!--            <artifactId>micrometer-tracing-bridge-otel</artifactId>-->
-<!--            <version>${micrometer-tracing.version}</version>-->
-<!--        </dependency>-->
-<!--        &lt;!&ndash; For Latency Visualization &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>io.opentelemetry</groupId>-->
-<!--            <artifactId>opentelemetry-exporter-zipkin</artifactId>-->
-<!--            <version>1.28.0</version>-->
-<!--        </dependency>-->
-
-
+        <!-- For pushing logs out -->
         <dependency>
             <groupId>com.github.loki4j</groupId>
             <artifactId>loki-logback-appender</artifactId>
             <version>${loki-logback-appender.version}</version>
             <scope>runtime</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>ch.qos.logback</groupId>
+                    <artifactId>logback-classic</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>

@@ -3,8 +3,16 @@
 ## License
 Essentials is released under version 2.0 of the [Apache License](https://www.apache.org/licenses/LICENSE-2.0)
 
-> **NOTE:**  
-> **The Essentials libraries are WORK-IN-PROGRESS**
+> **NOTE:** **The libraries are WORK-IN-PROGRESS**!
+>- ---
+> [Cloud Create](https://github.com/cloudcreate-dk) originally developed the [Essentials project](https://github.com/cloudcreate-dk/essentials-project).   
+> As of May 8th 2025, [Trustworks](https://www.trustworks.dk) has assumed responsibility for further development of the project.
+>
+> **Compatibility Note:**
+> *Trustworks' Essentials release version **0.40.24** remains API and functionally compatible with Cloud Create's version **0.40.24** (that was released on the 5th of May 2025).
+> Migration requires only updating module names and package references from `dk.cloudcreate` to `dk.trustworks`.*
+>
+> Essentials remain released under version 2.0 of the [Apache License](https://www.apache.org/licenses/LICENSE-2.0)
 
 # Security
 
@@ -36,12 +44,9 @@ By using naming conventions for Postgresql table/column/index names and MongoDB 
 
 ## Versions
 
-| Essentials version                                                                           | Java compatibility | Spring Boot compatibility | Notes                      |
-|----------------------------------------------------------------------------------------------|--------------------|---------------------------|----------------------------|
-| [0.9.*](https://github.com/cloudcreate-dk/essentials-spring-examples/tree/java11)            | 11-16              | 2.7.x                     | No longer being maintained |
-| [0.20.*](https://github.com/cloudcreate-dk/essentials-spring-examples/tree/springboot_3_0_x) | 17+                | 3.0.x                     | No longer being maintained |
-| [0.30.*](https://github.com/cloudcreate-dk/essentials-spring-examples/tree/springboot_3_1_x) | 17+                | 3.1.x                     | No longer being maintained |
-| [0.40.*](https://github.com/cloudcreate-dk/essentials-spring-examples/tree/main)             | 17+                | 3.2.x                     | Under active development   |
+| Essentials version                                                             | Java compatibility | Spring Boot compatibility | Notes                      |
+|--------------------------------------------------------------------------------|--------------------|---------------------------|----------------------------|
+| [0.40.24-](https://github.com/trustworksdk/essentials-project/tree/main)     | 17+                | 3.3.x                     | Under active development   |
 
 Examples of how to use the Essentials and Essentials Components together with Spring and Spring Boot:
 
