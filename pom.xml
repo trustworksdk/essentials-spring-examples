@@ -63,11 +63,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>17</java.version>
 
-        <revision>0.40.28</revision>
+        <revision>DEV-SNAPSHOT</revision>
         <skipDependencyCheck>false</skipDependencyCheck>
 
         <!--Essentials versions-->
-        <essentials.version>DEV-SNAPSHOT</essentials.version>
+        <essentials.version>0.40.28</essentials.version>
 
         <spring-boot.version>3.3.13</spring-boot.version>
         <spring-framework-bom.version>6.1.21</spring-framework-bom.version>
