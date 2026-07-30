@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="_csrf" th:content="${_csrf.token}">
+    <meta name="_csrf_header" th:content="${_csrf.headerName}">
+    <meta name="task-id" th:content="${taskId}">
+    <meta name="current-user" th:content="${currentUser}">
+    <title>Task View</title>
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+<div class="mesh"></div>
+<main class="dashboard-shell">
+    <header class="topbar">
+        <div>
+            <p class="eyebrow">Task View</p>
+            <h1 id="task-title">Task</h1>
+            <p class="muted">Task ID: <code id="task-id-label" th:text="${taskId}">taskId</code></p>
+        </div>
+        <div class="queue-actions">
+            <a class="logout" href="/">Back To Dashboard</a>
+            <a class="logout" href="/logout">Logout</a>
+        </div>
+    </header>
+
+    <section class="panel-grid">
+        <article class="panel span-6">
+            <div class="panel-head"><h2>Details</h2></div>
+            <dl class="detail-grid">
+                <dt>Status</dt><dd id="task-status">-</dd>
+                <dt>Priority</dt><dd id="task-priority">-</dd>
+                <dt>Assignee</dt><dd id="task-assignee">-</dd>
+                <dt>Created</dt><dd id="task-created">-</dd>
+                <dt>Updated</dt><dd id="task-updated">-</dd>
+                <dt>Last Comment</dt><dd id="task-last-comment">-</dd>
+            </dl>
+            <div class="editor-actions">
+                <button type="button" data-action="start">Start</button>
+                <button type="button" data-action="complete">Complete</button>
+                <button type="button" data-action="reopen">Reopen</button>
+                <button type="button" id="assign-to-me-btn">Assign To Me</button>
+                <button type="button" id="unassign-btn" hidden>Unassign</button>
+            </div>
+            <p id="assignment-hint" class="muted"></p>
+        </article>
+
+        <article class="panel span-6">
+            <div class="panel-head"><h2>Description</h2></div>
+            <form id="description-form" class="stack">
+                <label>Edit description
+                    <textarea id="description-input" name="description" rows="7" placeholder="Add detailed description"></textarea>
+                </label>
+                <button type="submit">Save Description</button>
+            </form>
+        </article>
+
+        <article class="panel span-6">
+            <div class="panel-head"><h2>Tags</h2></div>
+            <div id="tags-list" class="queue-list"><p class="muted">No tags.</p></div>
+            <form id="tag-form" class="inline-form">
+                <label>Tag<input name="tag" required placeholder="urgent"></label>
+                <select name="mode">
+                    <option value="tags">Add Tag</option>
+                    <option value="untags">Remove Tag</option>
+                </select>
+                <button type="submit">Apply</button>
+            </form>
+        </article>
+
+        <article class="panel span-6">
+            <div class="panel-head"><h2>Comments</h2></div>
+            <div id="comments-list" class="queue-list"><p class="muted">No comments yet.</p></div>
+            <form id="comment-form" class="stack compact">
+                <label>Add comment
+                    <textarea name="content" rows="4" required placeholder="Write comment"></textarea>
+                </label>
+                <button type="submit">Add Comment</button>
+            </form>
+        </article>
+    </section>
+
+    <section class="panel">
+        <div class="panel-head"><h2>Activity</h2></div>
+        <pre id="activity-log">Task view ready.</pre>
+    </section>
+</main>
+<div id="toast-host" class="toast-host" aria-live="polite"></div>
+<script src="/js/task-view.js"></script>
+</body>
+</html>

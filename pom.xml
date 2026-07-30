@@ -127,6 +127,7 @@
     </properties>
 
     <modules>
+        <module>task-management-app</module>
         <module>postgresql-cqrs</module>
         <module>mongodb-inbox-outbox</module>
         <module>postgresql-inbox-outbox</module>

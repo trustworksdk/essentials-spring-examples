@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register - Task Management Console</title>
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body class="login-page">
+<div class="mesh"></div>
+<main class="login-shell">
+    <section class="login-card">
+        <p class="eyebrow">Create Account</p>
+        <h1>Register User</h1>
+        <p class="muted">Create and register a new user to sign in.</p>
+
+        <p class="banner error" th:if="${param.error == 'exists'}">User ID already exists.</p>
+        <p class="banner error" th:if="${param.error == 'invalid'}">Please fill all fields with valid values.</p>
+        <p class="banner error" th:if="${param.error == 'processing'}">Registration is still processing. Please try again in a moment.</p>
+
+        <form method="post" action="/register">
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+            <label>User ID<input type="text" name="userId" autocomplete="username" minlength="3" maxlength="80" required></label>
+            <label>Display name<input type="text" name="displayName" minlength="2" maxlength="120" required></label>
+            <label>Email<input type="email" name="email" autocomplete="email" required></label>
+            <label>Password<input type="password" name="password" autocomplete="new-password" minlength="8" maxlength="128" required></label>
+            <button type="submit">Create Account</button>
+        </form>
+        <p class="hint">Already have an account? <a class="login-link" href="/login">Sign in</a></p>
+    </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login - Task Management Console</title>
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body class="login-page">
+<div class="mesh"></div>
+<main class="login-shell">
+    <section class="login-card">
+        <p class="eyebrow">Secure Access</p>
+        <h1>Task Management Console</h1>
+        <p class="muted">Sign in to use the UI and protected API endpoints.</p>
+
+        <p class="banner error" th:if="${param.error}">Invalid username or password.</p>
+        <p class="banner ok" th:if="${param.logout}">You have been logged out.</p>
+        <p class="banner ok" th:if="${param.registered}">Registration complete. You can now sign in as <strong th:text="${param.username}">username</strong>.</p>
+
+        <form method="post" action="/login">
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+            <label>Username<input type="text" name="username" autocomplete="username" required></label>
+            <label>Password<input type="password" name="password" autocomplete="current-password" required></label>
+            <button type="submit">Sign In</button>
+        </form>
+        <p class="hint">Username is your <code>userId</code> and password is set during <code>register</code>.</p>
+        <p class="hint">Need an account? <a class="login-link" href="/register">Register here</a></p>
+    </section>
+</main>
+</body>
+</html>
