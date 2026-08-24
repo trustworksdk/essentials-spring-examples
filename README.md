@@ -1,5 +1,7 @@
 # Essentials Spring Example
 
+**NOTE: 📝 The examples have been moved into the Essentials project [here](https://github.com/trustworksdk/essentials-project/tree/main/examples/essentials-spring-examples)**
+
 ## License
 Essentials is released under version 2.0 of the [Apache License](https://www.apache.org/licenses/LICENSE-2.0)
 
