@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{40} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.springframework.security" level="INFO"/>
+    <logger name="dk.trustworks.essentials" level="INFO"/>
+    <logger name="dk.trustworks.essentials.spring.examples.taskmanagement.config.AggregateUserDetailsService" level="INFO"/>
+    <logger name="dk.trustworks.essentials.spring.examples.taskmanagement.ui.RegistrationController" level="INFO"/>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
